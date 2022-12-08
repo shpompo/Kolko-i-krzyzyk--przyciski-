@@ -1,0 +1,111 @@
+:root{
+	--offset: 90px;
+}
+
+@keyframes slide {
+	0% {
+	  transform: translate3d(0, 0, 0);
+	}
+	100% {
+	  transform: translate3d(-1920px, -1080px, 0); /* The image width */
+	}
+}
+
+body{
+	background-image: linear-gradient( to top, #f54768 0%, #41436a 50%);
+}
+
+.container{
+	top: calc(75px - calc(var(--offset))/2);
+	left: calc(50% - calc(368px + var(--offset))/2);
+	position: absolute;
+	overflow: hidden;
+	width: calc(368px + var(--offset));
+	height: calc(372px + var(--offset));
+	z-index: -1;
+}
+
+.sliding-bg{
+	position: relative;
+	background-image: url("./obrazki/dot.png");
+	backdrop-filter: opacity(100%);
+	background-repeat: repeat;
+	width: 3840px;
+	height: 2160px;
+	animation: slide 10s linear infinite;
+	top: 0px;
+	left: 0px;
+}
+
+#div1{
+	width: fit-content;
+	margin: auto;
+}
+
+button {
+	background-image: linear-gradient(to top left, #41436a 0%, #974063 33%, #f54768 66%, #ff9677 100%);
+	border: 1px;
+	color: white;
+	font-weight: bold;
+	padding: 20px 20px;
+	margin-top: 4px;
+	border-radius: 0px;
+	left: 200px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 0px;
+	box-shadow: 1px 2px 1px black;
+	margin: 5px;
+}
+
+img {
+	background-image: url(obrazki/pole_puste_2.png);
+	height: 80px;
+	width: 80px;
+}
+.kolko {
+	background: url(obrazki/pole_o_2.png);
+	width: 80px;
+	height: 80px;
+}
+.krzyzyk {
+	background: url(obrazki/pole_x_2.png);
+	width: 80px;
+	height: 80px;
+}
+
+button:hover {
+	background-image: linear-gradient(to top left, #41436ad5 0%, #974063d2 33%, #f54767d5 66%, #ff9777d5 100%);
+}
+
+.restart {
+	background-color: #e984a2;
+	border: 1px;
+	color: #94ff6e;
+	font-weight: bold;
+	padding: 20px 20px;
+	margin-top: 4px;
+	border-radius: 10px;
+	margin: auto;
+	text-decoration: none;
+	display: block;
+	font-size: 20px;
+	font-family: tahoma;
+	text-shadow: 1px 2px 3px black;
+	text-align: center;
+}
+
+h1 {
+	color: #e984a2;
+	font-family: tahoma;
+	text-shadow: 1px 2px 3px black;
+	text-align: center;
+}
+
+.koniec {
+	color: #94ff6e;
+	font-family: tahoma;
+	text-shadow: 1px 2px 3px black;
+	text-align: center;
+}
